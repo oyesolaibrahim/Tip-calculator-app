@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
+	<link rel="stylesheet" href="style.css"/>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+	<header class="center">
+		<img src="images/logo.svg" alt="logo-img"/>
+	</header>
+	
+	<main class="flex">
+		<section class="section-1">
+			<div class="div-1">
+				<label>Bill</label>
+				<div class="flex dollar-142">
+					<input type="number" class="billInput" id="billInput"/>
+					<!--<h4>142.55</h4>-->
+				</div>
+			</div>
+			
+			<div class="div-2">
+				<h6>Select Tip %</h6>
+				<div class="div-btn-1">
+					<button class="btn perc-row-1 btn5" onclick="tipAmount5()">5%</button>
+					<button class="btn perc-row-1 btn10" onclick="tipAmount10()">10%</button>
+					<button class="btn perc-row-1 btn15" onclick="tipAmount15()">15%</button>
+					<button class="btn perc-row-2" id="btn25" onclick="tipAmount25()">25%</button>
+					<button class="btn perc-row-2 btn50" onclick="tipAmount50()">50%</button>
+					<input type="number" placeholder="Custom" class="custom-input" oninput="custom()"/>
+				</div>
+			</div>
+			
+			<div class="div-3">
+				<div class="flex">
+				<label>Number of People</label>
+				<p class="cant-be-zero">Can't be zero</p>
+				</div>
+				<div>
+					<input type="number" class="flex noOfPeopleInput" id="noOfPeopleInput"/>
+					<!--<h4>5</h4>-->
+				</div>
+			</div>
+		</section>
+		
+		<section class="section-2">
+				<div class="flex tip">
+					<div>
+						<h6 class="tip-amount">Tip Amount</h6>
+						<p>/ person</p>
+					</div>
+					<h3 class="tipResult">$4.27</h3>
+				</div>
+				
+				<div class="flex">
+					<div>
+						<h6 class="total">Total</h6>
+						<p>/ person</p>
+					</div>
+					<h3 class="totalResult">$32.79</h3>
+				</div>
+
+			<div>
+				<button class="btn resetBtn" onclick="resetBtn()">Reset</button>
+			</div>
+		</section>
+	</main>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Oyesola Ibrahim</a>.
+  </div>
+      <script src="script.js"></script>
+
+</body>
+</html>
